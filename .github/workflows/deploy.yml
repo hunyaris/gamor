@@ -12,6 +12,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      CI: false 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
